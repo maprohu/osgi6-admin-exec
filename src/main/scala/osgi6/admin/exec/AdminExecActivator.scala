@@ -9,7 +9,7 @@ import osgi6.akka.slf4j.AkkaSlf4j
 import osgi6.common.{AsyncActivator, HttpTools, OsgiTools}
 import osgi6.lib.multi.{ContextApiActivator, MultiApiActivator}
 import osgi6.multi.api.MultiApi.Callback
-import osgi6.multi.api.{Context, MultiApi}
+import osgi6.multi.api.{Context, ContextApi, MultiApi}
 
 import scala.concurrent.Future
 import scala.util.control.NonFatal
@@ -24,9 +24,11 @@ class AdminExecActivator extends ActorSystemActivator(
     import input.actorSystem.dispatcher
 
     ContextApiActivator.activate(
+      ContextApi.registry,
       { hasCtx =>
         hasCtx.apiContext.map({ c =>
           MultiApiActivator.activate(
+            MultiApi.registry,
             activate(
               input.bundleContext,
               c
