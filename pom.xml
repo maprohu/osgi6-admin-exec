@@ -4,7 +4,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <parent>
         <groupId>osgi6</groupId>
         <artifactId>osgi6-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0</version>
         <relativePath>../osgi6-parent</relativePath>
     </parent>
     <artifactId>osgi6-admin-exec</artifactId>
@@ -32,8 +32,6 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
             <artifactId>osgi6-common</artifactId>
         </dependency>
 
-
-
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
@@ -42,6 +40,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         <dependency>
             <groupId>osgi6</groupId>
             <artifactId>osgi6-multi-api</artifactId>
+            <version>1.0.13</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -75,4 +74,9 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
+    <scm>
+        <developerConnection>scm:git:https://github.com/maprohu/osgi6-admin-exec.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
 </project>
