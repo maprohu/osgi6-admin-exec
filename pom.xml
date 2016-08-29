@@ -3,7 +3,7 @@
     <parent>
         <groupId>osgi6</groupId>
         <artifactId>osgi6-parent</artifactId>
-        <version>1.0.3-SNAPSHOT</version>
+        <version>1.0.3</version>
         <relativePath>../osgi6-parent</relativePath>
     </parent>
     <artifactId>osgi6-admin-exec</artifactId>
